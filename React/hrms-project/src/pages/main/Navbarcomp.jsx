@@ -33,7 +33,7 @@ const handleClose = () => {
     <AppBar position="fixed" sx={{ backgroundColor: '#4DB6AC' }}>
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          HRMS HUB
+          HRMS HUB: DESIGNATIONS
         </Typography>
         <Stack direction="row" spacing={2}>
        

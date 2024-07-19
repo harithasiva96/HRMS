@@ -17,7 +17,7 @@ import Navbarcomp from "./Navbarcomp";
 import UpdateDesignation from "./UpdateDesignation";
 import ButtonGroup from '@mui/material/ButtonGroup';
 import { postDeleteDesignation } from "../../api/deleteDesignation.js";
-import { Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 
 
@@ -72,8 +72,12 @@ const ListDesignations = () => {
         <div>LOADING ...</div>
       ) : (<div>
         <Navbarcomp />
-        <Typography>Designations</Typography>
-        <Typography>Designations</Typography>
+        
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 10 }}>
+        <TableContainer component={Paper} sx={{ minWidth: 600, boxShadow: 3, mt: 14}}>
+
+        
+        
         {/* <Stack spacing={2} direction="row" justifyContent="center">
         <Button  variant="contained"  onClick = {handleOpen}>Add Designation</Button>
        </Stack>
@@ -130,6 +134,8 @@ const ListDesignations = () => {
           </TableBody>
         </Table>
       </TableContainer>
+      </TableContainer>
+      </Box>
       </div>
         )}
         {selectedDesignation && (
