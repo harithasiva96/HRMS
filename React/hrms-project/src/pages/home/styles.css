@@ -1,0 +1,19 @@
+#background {
+    height: 100%;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;      /* Full viewport width */
+    background-image: url('/home/user/HRMS/React/hrms-project/Background Images _ Wallpaper Photo _ Template Vectors _ iPhone screensaver.jpeg'); 
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+html, body {
+    height: 100%;
+    margin-top:0;
+    padding: 0;
+  }
