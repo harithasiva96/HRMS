@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@mui/icons-material": "^5.16.4",
+    "@reduxjs/toolkit": "^2.2.6"
+  }
+}
