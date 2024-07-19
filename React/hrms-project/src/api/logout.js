@@ -6,9 +6,9 @@ const instance = axios.create({
   baseURL: url,
 });
 
-export const postDeleteDesignation = (designation_id) => {
-  console.log(designation_id,"designation_id")
-    return instance.post(`/deletedesignation/${designation_id}`)
+export const postlogout = () => {
+  
+    return instance.post(`/logout`)
       .then(res => res.data)
       .catch(error => {
         throw error;

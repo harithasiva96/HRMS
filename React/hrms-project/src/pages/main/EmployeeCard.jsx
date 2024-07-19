@@ -104,7 +104,7 @@ import { Card, CardContent, Typography, Button, Container, Grid } from '@mui/mat
 import { saveAs } from 'file-saver';
 import QRCode from 'react-qr-code';
 import vCardsJS from 'vcards-js';
-import Navbarcomp from "./Navbarcomp";
+import Navbar from "./Navbar";
 
 const EmployeeCard = () => {
   const { employeeId } = useParams();
@@ -156,7 +156,7 @@ const EmployeeCard = () => {
 
   return (
     <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', backgroundColor: '#f0f0f0' }}> 
-    <Navbarcomp/>
+    <Navbar/>
 
       <Card sx={{ maxWidth: 600, marginTop: 5, padding: 2 }}>
         <CardContent sx={{ textAlign: 'center' }}>

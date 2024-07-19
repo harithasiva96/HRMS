@@ -8,7 +8,7 @@ import AddDesignation from './pages/main/AddDesignation';
 import UpdateEmployee from './pages/main/UpdateEmployee';
 import UpdateDesignation from './pages/main/UpdateDesignation';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import MiniDrawer from './pages/main/SideDrawer';
+import MiniDrawer from './pages/main/SideDrawer';
 import './App.css';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
         <Route path='/designation' element={<AddDesignation />} />
         <Route path='/updateemployee' element={<UpdateEmployee />} />
         <Route path='/updatedesignation' element={<UpdateDesignation />} />
-        {/* <Route path='/minidrawer' element={<MiniDrawer/>} /> */}
+        <Route path='/minidrawer' element={<MiniDrawer/>} />
         
         
       </Routes>
