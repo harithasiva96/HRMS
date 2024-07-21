@@ -371,16 +371,17 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Designations','Leave rules'].map((text, index) => (
+          {['Designations','Leave policy'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 onClick={() => {
                     if (text === 'Designations') {
                       navigate('/designations');
-                    } else if (text === 'Leave rules') {
-                      navigate('/leave-rules');
+                    } else if (text === 'Leave policy') {
+                      navigate('/leavepolicy');
                     }
                   }}
+                
                 sx={{
                   minHeight: 48,
                   justifyContent: open ? 'initial' : 'center',

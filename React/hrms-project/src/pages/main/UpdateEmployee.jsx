@@ -90,6 +90,12 @@ const UpdateEmployee = ({ openUpdate, handleClose, employeeData }) => {
         <TextField
           fullWidth
           label="Total Leaves Used"
+          id="filled-number"
+              type="number"
+              InputLabelProps={{
+                shrink: true,
+              }}
+          variant="filled"
           value={employee.total_leaves_used}
           onChange={(e) =>
             setEmployee({ ...employee, total_leaves_used: e.target.value })

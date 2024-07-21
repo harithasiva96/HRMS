@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { postEmployeeData } from "../../store/addemployee.js";
 import { TextField, Button, Box, Modal, Dialog, Snackbar } from "@mui/material";
+// import MultipleSelectCheckmarks from "./Dropdown.jsx"
 
 const AddEmployee = ({open, handleClose }) => {
   const dispatch = useDispatch();
@@ -42,7 +43,8 @@ const AddEmployee = ({open, handleClose }) => {
     console.log("Form submitted:", employee);
     dispatch(
       postEmployeeData({
-        data: employee,
+        // data: employee,
+        data: { ...employee, designation_name: employee.designation_name }, 
         successCB: handleSuccessCB,
         errorCB: handleErrorCB,
       })
@@ -111,7 +113,6 @@ const AddEmployee = ({open, handleClose }) => {
               fullWidth
               label="Total Leaves Used"
               id="filled-number"
-              
               type="number"
               InputLabelProps={{
                 shrink: true,
@@ -143,7 +144,7 @@ const AddEmployee = ({open, handleClose }) => {
               sx={{ mb: 2 }}
             />
             <TextField
-             
+            
               fullWidth
               label="designation_name"
               
@@ -153,6 +154,15 @@ const AddEmployee = ({open, handleClose }) => {
               }
               sx={{ mb: 2 }}
             />
+
+            {/* <MultipleSelectCheckmarks
+              
+              value={employee.designation_name}
+              onChange={(event) => {
+                setEmployee({ ...employee, designation_name: event.target.value });
+              }}
+            /> */}
+
 
             <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
               <Button

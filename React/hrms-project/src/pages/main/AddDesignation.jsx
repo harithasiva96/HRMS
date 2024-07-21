@@ -96,6 +96,12 @@ const AddDesignation = ({openAdd, handleClose }) => {
             <TextField
               fullWidth
               label="Maximum Permitted Leave"
+              id="filled-number"
+              type="number"
+              InputLabelProps={{
+                shrink: true,
+              }}
+              variant="filled"
               value={designation.max_permitted_leave}
               onChange={(e) =>
                 setDesignation({ ...designation, max_permitted_leave: e.target.value })

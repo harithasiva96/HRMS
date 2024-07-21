@@ -67,7 +67,7 @@ const ListDesignations = () => {
 
   return (
     <>
-    {/* <Navbarcomp /> */}
+    
       {isLoading === "pending" ? (
         <div>LOADING ...</div>
       ) : (<div>
@@ -75,13 +75,7 @@ const ListDesignations = () => {
         
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 10 }}>
         <TableContainer component={Paper} sx={{ minWidth: 600, boxShadow: 3, mt: 14}}>
-
-        
-        
-        {/* <Stack spacing={2} direction="row" justifyContent="center">
-        <Button  variant="contained"  onClick = {handleOpen}>Add Designation</Button>
-       </Stack>
-        */}
+      
         <TableContainer component={Paper}>
         <Table sx={{ minWidth: 400 }} aria-label="simple table">
           <TableHead>
