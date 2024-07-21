@@ -61,10 +61,6 @@ class Designation(db.Model):
 
 
 
-
-
-
-
 def init_db(db_uri='postgresql://postgres:password@localhost:5432/hrms'):
     logger = logging.getLogger("FlaskApp")
     engine = create_engine(db_uri)
