@@ -143,7 +143,7 @@ const UpdateEmployee = ({ openUpdate, handleClose, employeeData }) => { //eslint
             <Select
             name="des_name"
             
-            value={employee.des_name}
+            value={employee.designation_name}
             onChange={(e) =>
               setEmployee({ ...employee, designation_name: e.target.value })
             }
