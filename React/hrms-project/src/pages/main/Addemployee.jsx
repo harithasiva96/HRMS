@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useState,useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { postEmployeeData } from "../../store/addemployee.js";
-import { TextField, Button, Box, Modal, Dialog, Snackbar } from "@mui/material";
-
+import { TextField, Button, Box, Modal, Dialog, Snackbar, Select, MenuItem, FormControl, InputLabel} from "@mui/material";
+import { getDesignationData } from "../../store/listDesignation.js";
 
 const AddEmployee = ({open, handleClose }) => { //eslint-disable-line
   const dispatch = useDispatch();
@@ -22,6 +22,11 @@ const AddEmployee = ({open, handleClose }) => { //eslint-disable-line
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
+  const designation = useSelector((state) => state.designationData.data);
+  console.log(designation,"desi data")  
+  useEffect(() => {
+    dispatch(getDesignationData());
+  }, [dispatch]);
   const handleSuccessCB = () => {
     setSuccessMessage("Employee added successfully!");
     setEmployee(initialValues);
@@ -135,17 +140,60 @@ const AddEmployee = ({open, handleClose }) => { //eslint-disable-line
               }
               sx={{ mb: 2 }}
             />
-            <TextField
-            
+            {/* <Select
+              id="designation"
               fullWidth
               label="designation_name"
-              
+              variant="contained"
               value={employee.designation_name}
               onChange={(e) =>
                 setEmployee({ ...employee, designation_name: e.target.value })
               }
+              displayEmpty
               sx={{ mb: 2 }}
-            />
+            >
+              <MenuItem value="" disabled>
+              Select Designation
+              </MenuItem>
+              {designationData.map(des => (
+                <MenuItem key={des.designation_name} value={des.designation_name}>
+                    {des.designation_name}
+                </MenuItem>
+              ))}
+              </Select> */}
+              <FormControl fullWidth variant="outlined" sx={{ mb: 2 }}>
+              <InputLabel id="designation-label">Designation</InputLabel>
+
+<Select
+            name="des_name"
+            
+            value={employee.des_name}
+            onChange={(e) =>
+              setEmployee({ ...employee, designation_name: e.target.value })
+            }
+            displayEmpty
+            sx={{
+              width: '350px',         
+              height: '50px',         
+              maxWidth: '100%',      
+              minWidth: '200px',}}
+              label="Designation"
+            
+            >
+              <MenuItem value="" disabled>
+              Select Designation
+              </MenuItem>
+              {designation.map(designation => (
+                <MenuItem key={designation.designation_name} value={designation.designation_name}>
+                  {designation.designation_name}
+                </MenuItem>
+              ))}
+            </Select>
+            </FormControl>
+
+
+            
+             
 
            
 

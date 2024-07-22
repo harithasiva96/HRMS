@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch ,useSelector} from "react-redux";
 import { updateEmployeeData } from "../../store/updateEmployee"
-import { TextField, Button, Box, Dialog, Snackbar } from "@mui/material";
+import { TextField, Button, Box, Dialog, Snackbar,MenuItem, Select , FormControl, InputLabel} from "@mui/material";
+import { getDesignationData } from "../../store/listDesignation.js";
 
 const UpdateEmployee = ({ openUpdate, handleClose, employeeData }) => { //eslint-disable-line
   const dispatch = useDispatch();
@@ -37,6 +38,11 @@ const UpdateEmployee = ({ openUpdate, handleClose, employeeData }) => { //eslint
     setSuccessMessage("");
     setErrorMessage("");
   };
+
+  const designation = useSelector((state) => state.designationData.data);
+  useEffect(() => {
+    dispatch(getDesignationData());
+  }, [dispatch]);
 
   const handleUpdateEmployee = (e) => {
    
@@ -120,7 +126,7 @@ const UpdateEmployee = ({ openUpdate, handleClose, employeeData }) => { //eslint
           }
           sx={{ mb: 2 }}
         />
-        <TextField
+        {/* <TextField
           fullWidth
           label="Designation Name"
           value={employee.designation_name}
@@ -128,7 +134,37 @@ const UpdateEmployee = ({ openUpdate, handleClose, employeeData }) => { //eslint
             setEmployee({ ...employee, designation_name: e.target.value })
           }
           sx={{ mb: 2 }}
-        />
+        /> */}
+
+            <FormControl fullWidth variant="outlined" sx={{ mb: 2 }}>
+              <InputLabel id="designation-label">Designation</InputLabel>
+
+
+            <Select
+            name="des_name"
+            
+            value={employee.des_name}
+            onChange={(e) =>
+              setEmployee({ ...employee, designation_name: e.target.value })
+            }
+            displayEmpty
+            sx={{
+              width: '350px',         
+              height: '50px',         
+              maxWidth: '100%',      
+              minWidth: '200px',}}
+            
+            >
+              <MenuItem value="" disabled>
+              Select Designation
+              </MenuItem>
+              {designation.map(designation => (
+                <MenuItem key={designation.designation_name} value={designation.designation_name}>
+                  {designation.designation_name}
+                </MenuItem>
+              ))}
+            </Select>
+            </FormControl>
 
         <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
           <Button
