@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { postDesignationData } from "../../store/designationadd.js";
 import { TextField, Button, Box, Modal, Dialog, Snackbar } from "@mui/material";
 
-const AddDesignation = ({openAdd, handleClose }) => {
+const AddDesignation = ({openAdd, handleClose }) => { //eslint-disable-line
   const dispatch = useDispatch();
 
   const initialValues = {
@@ -17,13 +17,13 @@ const AddDesignation = ({openAdd, handleClose }) => {
 //   console.log("designation", designation);
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  console.log("Form submitted:", designation);
+  // console.log("Form submitted:", designation);
 
   const handleSuccessCB = () => {
     setSuccessMessage(" Designation added successfully!");
     setDesignation(initialValues);
     handleClose();
-    console.log("success")
+    // console.log("success")
   };
 
   const handleErrorCB = (error) => {
@@ -37,9 +37,9 @@ const AddDesignation = ({openAdd, handleClose }) => {
 
   // submit button
   const handleAddDesignation = (e) => {
-    console.log("handleAddDesignation")
+    // console.log("handleAddDesignation")
     e.preventDefault();
-    console.log("Form submitted:", designation);
+    // console.log("Form submitted:", designation);
     dispatch(
       postDesignationData({
         data: designation,
@@ -74,16 +74,7 @@ const AddDesignation = ({openAdd, handleClose }) => {
               p: 4,
             }}
           >
-            {/* <TextField
-              fullWidth
-              label="Designation Id"
-              value={designation.designation_id}
-              onChange={(e) =>
-                setDesignation({ ...designation, designation_id: e.target.value })
-              }
-              sx={{ mb: 2 }}
-              
-            /> */}
+           
             <TextField
               fullWidth
               label="Designation Name"
@@ -129,7 +120,7 @@ const AddDesignation = ({openAdd, handleClose }) => {
           </Box>
         </Modal>
       </Dialog>
-
+      {/* Snackbar for success message */}
       <Snackbar
         open={!!successMessage}
         autoHideDuration={6000}

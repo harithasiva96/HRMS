@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-// import {useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 import { getDesignationData } from "../../store/listDesignation";
-// import {updateDesignationData} from "../../store/updateDesignation"
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -10,10 +8,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-// import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Navbarcomp from "./Navbarcomp";
-// import AddDesignation from "./AddDesignation"
 import UpdateDesignation from "./UpdateDesignation";
 import ButtonGroup from '@mui/material/ButtonGroup';
 import { postDeleteDesignation } from "../../api/deleteDesignation.js";
@@ -26,28 +22,20 @@ const ListDesignations = () => {
   
   const [openUpdate, setOpenUpdate] = useState(false);
   const [selectedDesignation, setSelectedDEsignation] = useState(null);
-  // const [openAdd, setOpenAdd] = useState(false);
-  console.log(open,"open")
+ 
+  // console.log(open,"open")
   const dispatch = useDispatch();
   const designationData = useSelector((state) => state.designationData.data);
-  console.log(designationData,"desiiii")
+  // console.log(designationData,"desiiii")
   const isLoading = useSelector((state) => state.designationData.status);
-  // const navigate = useNavigate();
+  
 
   const handleOpenUpdate = (employee) => {
     setSelectedDEsignation(employee);
     setOpenUpdate(true);
   };
   
-  //  const handleOpen = () => {
-  //   setOpenAdd(true)
-  // };
-
-  // const handleClose = () => {
-  //   setOpenAdd(false);
-  //   // refresh the get product page
-  //   dispatch(getDesignationData())
-  // }
+  
   const handleCloseUpdate = () => {
     setOpenUpdate(false);
     setSelectedDEsignation(null);
@@ -139,8 +127,7 @@ const ListDesignations = () => {
           designationData={selectedDesignation}
         />
       )}
- {/* < AddDesignation openAdd ={openAdd}
-    handleClose ={handleClose}/> */}
+ 
     
      </>
   );

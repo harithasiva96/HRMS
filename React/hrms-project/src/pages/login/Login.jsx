@@ -252,7 +252,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", login);
+    // console.log("Form submitted:", login);
     dispatch(
       postLoginData({
         data: login,

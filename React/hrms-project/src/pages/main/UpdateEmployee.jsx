@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { updateEmployeeData } from "../../store/updateEmployee"
 import { TextField, Button, Box, Dialog, Snackbar } from "@mui/material";
 
-const UpdateEmployee = ({ openUpdate, handleClose, employeeData }) => {
+const UpdateEmployee = ({ openUpdate, handleClose, employeeData }) => { //eslint-disable-line
   const dispatch = useDispatch();
 
   const [employee, setEmployee] = useState(employeeData);
@@ -18,11 +18,11 @@ const UpdateEmployee = ({ openUpdate, handleClose, employeeData }) => {
   }, [employeeData]);
 
   const handleSuccessCB = (data) => {
-    // setSuccessMessage(data || "Employee details updated successfully!");
+   
     setSuccessMessage("Employee added successfully!");
     
     console.log("success",data)
-    console.log(successMessage,'msg')
+   
 
     setEmployee(employeeData)
     handleClose();

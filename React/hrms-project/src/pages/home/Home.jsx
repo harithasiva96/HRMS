@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <div id="background">
-    <Typography variant="h2" component="div" sx={{ flexGrow: 1 }}>
+    <Typography variant="h2" component="div" sx={{ flexGrow: 1, fontWeight: 'bold', color: '#333',textAlign: 'center',}}>
           Innovative Solutions
         </Typography>
       <Box
