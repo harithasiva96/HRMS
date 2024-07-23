@@ -1,6 +1,6 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit"
 import {getEmployee} from "../api/employee"
-// import axios from 'axios';
+
 
 const initialState = {
     status : "idle",
@@ -16,13 +16,6 @@ export const getEmployeeData = createAsyncThunk(
 
 )
 
-// export const updateEmployeeLeave = createAsyncThunk(
-//   'employee/updateEmployeeLeave',
-//   async ({ employeeId, totalLeaves }) => {
-//     const response = await axios.put(`/api/employees/${employeeId}`, { total_leaves_used: totalLeaves });
-//     return response.data;
-//   }
-// );
 
 export const employeeDataSlice = createSlice ({
     name: "employeeData",
@@ -43,13 +36,7 @@ export const employeeDataSlice = createSlice ({
             state.status = 'failed';
           });
 
-        // .addCase(updateEmployeeLeave.fulfilled, (state, action) => {
-        //     const { employeeId,  total_leaves_used } = action.payload;
-        //     const employee = state.data.find(emp => emp.employee_id === employeeId);
-        //     if (employee) {
-        //       employee.total_leaves_used = total_leaves_used;
-        //     }
-        //   })
+       
       },
     });
     

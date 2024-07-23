@@ -23,7 +23,7 @@ const ListDesignations = () => {
   const [openUpdate, setOpenUpdate] = useState(false);
   const [selectedDesignation, setSelectedDEsignation] = useState(null);
  
-  // console.log(open,"open")
+  
   const dispatch = useDispatch();
   const designationData = useSelector((state) => state.designationData.data);
   // console.log(designationData,"desiiii")

@@ -1,28 +1,3 @@
-// import axios from 'axios';
-
-// const url= import.meta.env.VITE_PRODUCT_URL
-
-// const instance = axios.create({
-//   baseURL: url,
-// });
-
-// export const postLogin = () => {    
-//   console.log(url,"url")                                                                                                                                                                                                                                                                                                                                                                                                                              
-//   return instance.post('/login').then(
-//     (res) => {
-//       console.log(res.data)
-//       return res.data;
-//     })
-
-//     .catch(error => {
-//       // console.error("Error:", error);
-//       throw error;
-//     }
-//   );
-    
-// };
-
-
 import axios from 'axios';
 
 export const postLogin = (data,successCB, errorCB ) => { 
@@ -41,6 +16,6 @@ export const postLogin = (data,successCB, errorCB ) => {
             console.log(error.response.data.message)
             const resp = error.response.data.message
             errorCB(resp)
-            // if (errorCB) errorCB("An error occurred");
+           
       }
     ))}

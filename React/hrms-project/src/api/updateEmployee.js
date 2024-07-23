@@ -5,16 +5,11 @@ export const updateEmployee = ({employee_id,data,successCB, errorCB} ) => {
   const url = `${import.meta.env.VITE_HRMS_URL}/updateemployee/${employee_id}`
   console.log(url)
   return (
-    // axios.put(url,data).then(
-    //   (res)=> {
-    //     console.log(data,"api data")
-    //     // successCB()
-    //     if (successCB) successCB(res.data)
-    //     return  res.data;
+   
     axios.put(url,data).then(
       (res)=> {
         console.log(data,"api data")
-        // successCB()
+       
         if (successCB) successCB(res.data)
         return  res.data;
       },

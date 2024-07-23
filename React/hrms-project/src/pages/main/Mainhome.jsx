@@ -9,7 +9,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-// import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import UpdateEmployee from "./UpdateEmployee.jsx";
 import ButtonGroup from '@mui/material/ButtonGroup';
@@ -51,9 +50,7 @@ const Mainhome = () => {
 
   return (
     <>
-      {/* <Stack spacing={2} direction="row" justifyContent="center">
-       
-      </Stack> */}
+     
       <Typography variant="h4" gutterBottom sx={{ p: 2, textAlign: 'center' }}>
         Employees
       </Typography>

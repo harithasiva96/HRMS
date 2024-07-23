@@ -16,6 +16,6 @@ export const postEmployee = (data,successCB, errorCB ) => {
             if (errorCB) errorCB("An error occurred");
             // console.log(error.response.data.message)
             // const resp = error.response.data.message
-            // errorCB(resp)
+          
       }
     ))}

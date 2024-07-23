@@ -6,7 +6,7 @@ import employeeDetailsReducer from "./employeeCard"
 import designationDataReducer from "./listDesignation"
 import postDesignationReducer from "./designationadd"
 import updateEmployeeReducer from "./updateEmployee"
-// import updateDesignationReducer from "./updateDesignation"
+
 
 
 export const store = configureStore({
@@ -18,6 +18,6 @@ export const store = configureStore({
         designationData : designationDataReducer,
         postdesigData : postDesignationReducer,
         updateData : updateEmployeeReducer,
-        // updateDesig : updateDesignationReducer,
+       
     }
 })

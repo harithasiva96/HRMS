@@ -1,4 +1,3 @@
-// import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
@@ -21,7 +20,6 @@ import MailIcon from '@mui/icons-material/Mail';
 import Mainhome from './Mainhome.jsx';
 import  { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-// import axios from 'axios';
 import { useDispatch } from "react-redux";
 import { getEmployeeData } from "../../store/employee.js";
 import { Button, Stack} from '@mui/material';

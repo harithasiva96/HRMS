@@ -140,31 +140,10 @@ const AddEmployee = ({open, handleClose }) => { //eslint-disable-line
               }
               sx={{ mb: 2 }}
             />
-            {/* <Select
-              id="designation"
-              fullWidth
-              label="designation_name"
-              variant="contained"
-              value={employee.designation_name}
-              onChange={(e) =>
-                setEmployee({ ...employee, designation_name: e.target.value })
-              }
-              displayEmpty
-              sx={{ mb: 2 }}
-            >
-              <MenuItem value="" disabled>
-              Select Designation
-              </MenuItem>
-              {designationData.map(des => (
-                <MenuItem key={des.designation_name} value={des.designation_name}>
-                    {des.designation_name}
-                </MenuItem>
-              ))}
-              </Select> */}
-              <FormControl fullWidth variant="outlined" sx={{ mb: 2 }}>
+             <FormControl fullWidth variant="outlined" sx={{ mb: 2 }}>
               <InputLabel id="designation-label">Designation</InputLabel>
 
-<Select
+          <Select
             name="des_name"
             
             value={employee.des_name}
@@ -191,11 +170,6 @@ const AddEmployee = ({open, handleClose }) => { //eslint-disable-line
             </Select>
             </FormControl>
 
-
-            
-             
-
-           
 
             <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
               <Button
