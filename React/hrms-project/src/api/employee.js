@@ -7,10 +7,10 @@ const instance = axios.create({
 });
 
 export const getEmployee = () => {    
-      console.log(url,"url")                                                                                                                                                                                                                                                                                                                                                                                                                              
+      // console.log(url,"url")                                                                                                                                                                                                                                                                                                                                                                                                                              
       return instance.get('/employee').then(
         (res) => {
-          console.log(res.data)
+          // console.log(res.data)
           return res.data;
         })
     

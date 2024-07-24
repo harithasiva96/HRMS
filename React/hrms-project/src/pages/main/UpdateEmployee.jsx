@@ -30,13 +30,13 @@ const UpdateEmployee = ({ openUpdate, handleClose, employeeData }) => { //eslint
         };
 
        
-  const handleErrorCB = (error) => {
-    setErrorMessage(error?.message || "An error occurred while updating employee details.");
-  };
 
+  const handleErrorCB = (data) => {
+    setErrorMessage(data)
+        };
   const handleCloseSnackbar = () => {
     setSuccessMessage("");
-    setErrorMessage("");
+    // setErrorMessage("");
   };
 
   const designation = useSelector((state) => state.designationData.data);

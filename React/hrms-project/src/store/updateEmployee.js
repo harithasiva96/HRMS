@@ -27,11 +27,11 @@ export const updateEmployeeSlice = createSlice({
             .addCase(updateEmployeeData.fulfilled, (state, action) => {
                 state.status = 'succeeded';
                 state.data = action.payload;
-                state.error = null;
+                // state.error = null;
             })
-            .addCase(updateEmployeeData.rejected, (state, action) => {
+            .addCase(updateEmployeeData.rejected, (state) => {
                 state.status = 'failed';
-                state.error = action.error.message;
+                // state.error = action.error.message;
             });
     },
 });

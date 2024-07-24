@@ -14,11 +14,11 @@ export const updateEmployee = ({employee_id,data,successCB, errorCB} ) => {
         return  res.data;
       },
       (error)=>{
-            // console.log(error.response.data.message)
-            // const resp = error.response.data.message
-            console.log("errorrrr", error)
-            if (errorCB) errorCB("An error occurred");
-            // errorCB(resp)
+            console.log(error.response.data.error)
+            const resp = error.response.data.error
+            // console.log("errorrrr", error)
+            // if (errorCB) errorCB("An error occurred");
+            errorCB(resp)
           
       }
     ))}

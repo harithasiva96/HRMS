@@ -7,7 +7,7 @@ const instance = axios.create({
 });
 
 export const postDeleteDesignation = (designation_id) => {
-  console.log(designation_id,"designation_id")
+  // console.log(designation_id,"designation_id")
     return instance.post(`/deletedesignation/${designation_id}`)
       .then(res => res.data)
       .catch(error => {

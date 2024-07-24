@@ -12,7 +12,7 @@ export const postLoginData = createAsyncThunk(
         "loginData/postLogin",
         async ({data,successCB, errorCB}) => {
             const response = await postLogin(data,successCB,errorCB)
-            console.log("new data",data)
+            // console.log("new data",data)
             return response?.data;
         }
 

@@ -10,6 +10,7 @@ import UpdateDesignation from './pages/main/UpdateDesignation';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MiniDrawer from './pages/main/SideDrawer';
 import LeavePolicyCards from './pages/main/LeavePolicy';
+
 import './App.css';
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
         <Route path='/updatedesignation' element={<UpdateDesignation />} />
         <Route path='/minidrawer' element={<MiniDrawer/>} />
         <Route path='/leavepolicy' element={<LeavePolicyCards />} />
+      
+
         
         
       </Routes>

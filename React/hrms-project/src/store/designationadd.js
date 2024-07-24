@@ -32,7 +32,7 @@ export const postDesignationSlice = createSlice ({
         .addCase(postDesignationData.fulfilled, (state,action) => {
             state.status = 'succeeded';
             state.postData = action.payload;
-            state.error = null;
+            // state.error = null;
            
           })
         .addCase(postDesignationData.rejected, (state) => {
