@@ -10,6 +10,7 @@ from datetime import datetime, timezone
 from sqlalchemy.sql import func
 
 
+db_uri ='postgresql://postgres:password@localhost:5432/hrms'
 class Base(DeclarativeBase):
   pass
 
@@ -61,7 +62,7 @@ class Designation(db.Model):
 
 
 
-def init_db(db_uri='postgresql://postgres:password@localhost:5432/hrms'):
+def init_db(db_uri):
     logger = logging.getLogger("FlaskApp")
     engine = create_engine(db_uri)
     Base.metadata.create_all(engine)

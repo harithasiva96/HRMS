@@ -8,7 +8,7 @@ from sqlalchemy import desc
 import datetime as dt
 
 app = flask.Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:password@localhost:5432/hrms"
+app.config["SQLALCHEMY_DATABASE_URI"] = db_uri
 app.config['SECRET_KEY'] = 'haritha' 
 
 CORS(app)
@@ -89,7 +89,7 @@ def logout():
 def insertDesignation():
   
     input=request.get_json()
-
+   
     if 'designation_name' not in input or 'max_permitted_leave' not in input:
         return jsonify({'message': 'Missing designation_name or max_permitted_leave.'}), 400
     
